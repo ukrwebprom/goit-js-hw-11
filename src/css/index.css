@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,300&display=swap");
+body, p {
+  padding: 0;
+  margin: 0;
+  background-color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.search-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form {
+  padding: 10px 0 10px 0;
+  display: flex;
+}
+
+.search-form__input {
+  height: 36px;
+  font-family: inherit;
+  padding-left: 10px;
+}
+
+.search-form__button {
+  padding: 0 10px 0 10px;
+  font-family: inherit;
+}
+
+.load-more {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-family: inherit;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.gallery {
+  margin-top: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.photo-card {
+  flex-basis: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  border: 1px solid #eee;
+}
+@media screen and (min-width: 648px) {
+  .photo-card {
+    flex-basis: calc(50% - 10px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .photo-card {
+    flex-basis: calc(33% - 10px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .photo-card {
+    flex-basis: calc(25% - 10px);
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.info .info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+}
+.info .info-data {
+  background-color: transparent;
+  color: #333;
+  font-size: 14px;
+}
+
+.photo-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo-container img {
+  width: 100%;
+}/*# sourceMappingURL=index.css.map */
