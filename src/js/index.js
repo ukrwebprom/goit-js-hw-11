@@ -1,6 +1,6 @@
 import { Pixabay } from './pixabay';
 import Notiflix from 'notiflix';
-import cardTpl from '../templates/card.hbs';
+import {getTemplate} from './template';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 let gallery = new SimpleLightbox('.gallery a');
@@ -60,7 +60,7 @@ function afterImagesLoaded(imgs) {
 }
 
 function renderImgs(imgs) {
-  const cards = imgs.map(cardTpl).join(' ');
+  const cards = imgs.map(getTemplate).join(' ');
   galleryContainer.insertAdjacentHTML('beforeend', cards);
   gallery.refresh();
 }
