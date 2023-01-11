@@ -20,7 +20,8 @@ loadMoreBtn.addEventListener('click', loadMore);
 
 async function onSubmit(evt) {
   evt.preventDefault();
-  const query = evt.target.elements.searchQuery.value;
+  const query = evt.target.elements.searchQuery.value.trim();
+  if(!query) return;
   cleanPage();
   try {
     const images = await pixabay.findImages(query);
